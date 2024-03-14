@@ -1,0 +1,114 @@
+:root {
+    --banner-height:450px;
+
+    @media (max-width:800px) {
+        --banner-height:280px;
+    }
+}
+a {
+    text-decoration: none;
+}
+
+.cart-status {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    background: #ffffff;
+    border: 5px;
+    z-index: 1000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.523);
+    h5 {
+        padding: 10px;
+        color: #000;
+        border-radius: 5px;
+        background: #a6b2ff;
+    }
+    .exit-button {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+
+.home-component {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+
+    .banner-component {
+        padding: 15px;
+        background: #181818;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .box-text {
+            right: -2%;
+            z-index: 100;
+            position: absolute;
+            // width: 100px;
+            // height: 100px;
+            padding: 10px 10px;
+            width: 150px;
+            transform: rotate(-90deg);
+            color: #000;
+            background: #ffffff;
+            .slide-text {
+                position: relative;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            h5 {
+                display: inline-block;
+                font-size: 17px;
+                &.abs {
+                    position: absolute;
+                }
+            }
+        }
+        .cover-component {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            .img-sliders {
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                // position: absolute;
+                &.abs {
+                    z-index: 0;
+                    // clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+                    display: inline-block;
+                    position: absolute;
+                }
+            }
+
+
+            img {
+                width: 100%;
+                height: var(--banner-height);
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+:root {
+  --padding-app:18px;
+}
+@media (max-width:768px) {
+  :root {
+    --padding-app:7.5px;
+  }
+}
+
+.App {
+  padding: var(--padding-app);
+  min-height: 100vh;
+  background: #323232;
+  position: relative;
+}

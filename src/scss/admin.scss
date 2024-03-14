@@ -1,0 +1,255 @@
+.admin-component {
+
+    .navbar-components {
+        .link-item {
+            cursor: pointer;
+        }
+    }
+
+    .edit-form {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .form-input {
+            width: 250px;
+            display: grid;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .button-div {
+            width: 125px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #6875e8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+            background-color: #5563c1;
+            }
+
+            & + button {
+            // margin-left: 10px;
+            background-color: #ccc;
+                &:hover {
+                    background-color: #999;
+                }
+            }
+        }
+    }
+
+
+    .accounts-component {
+        width: 100%;
+        // min-height: 100%;
+        padding: 20px;
+        .account-subcomponent {
+            background: linear-gradient(180deg, #6c6c6c 0%, rgba(56, 58, 60, 0) 100%);
+            width: 100%;
+            min-height: 100vh;
+            padding: 20px;
+                
+            .search-bar {
+                margin-bottom: 20px;
+            
+                input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+                }
+            }
+            
+            .list-of-accounts {
+                table {
+                width: 100%;
+                border-collapse: collapse;
+                border: 1px solid #ccc;
+            
+                    th, td {
+                        padding: 10px;
+                        text-align: left;
+                    }
+
+                    td {
+                    }
+                
+                    th {
+                        background-color: #6e6e6e;
+                    }
+                
+                    tr:nth-child(even) {
+                        background-color: #f2f2f2;
+                    }
+                
+                    tr:nth-child(odd) {
+                        background-color: #d6d4d4;
+                    }
+                
+                    tr:hover {
+                        background-color: #dadada;
+                    }
+                    .button-div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap:10px;
+                    }
+                    button {
+                        padding: 5px;
+
+                    }
+                }
+            }
+            
+              
+        }
+    }
+}
+
+.dashboard-component {
+    width: 100%;
+    // min-height: 100%;
+    padding: 20px;
+    .dash-subcomponent {
+        background: linear-gradient(180deg, #6c6c6c 0%, #1e1e23 100%);        width: 100%;
+        min-height: 100vh;
+        padding: 20px;
+
+        .show-data {
+            display: flex;
+            align-items: center;
+            // width: 100%;
+            // background: orange;
+            gap: 15px;
+            
+            .data {
+                display: grid;
+                align-self: flex-start;
+                width: 250px;
+                height: 100px;
+                background: #6c6c6c;
+                padding: 15px;
+                color: #fff;
+                .field-data {
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    justify-content: space-evenly;
+                }
+            }
+            .under-line {
+                background: rgb(255, 255, 255);
+                height: 1.5px;
+                width: 100%;
+            }
+        }
+    }
+
+
+
+    .daily-orders {
+        padding: 5px;
+        margin-top: 20px;
+        h5 {
+            font-size: 18px;
+        }
+    }
+
+    .bar-chart {
+        padding: 20px;
+        position: relative;
+
+        .range-high {
+            top: 5%;
+            left: 2.5%;
+            width: 95%;
+            height: 90%;
+            display: grid;
+            position: absolute;
+            z-index: 2;
+            h5 {
+                color: #fff;
+                text-align: right;
+                width: 100%;
+                margin-left: auto;
+            }
+            .under_line {
+                width: 100%;
+                height: 1.5px;
+                background: white;
+            }
+        }
+
+        .bar-body-chart {
+            z-index: 2;
+            width: 100%;
+            height: 650px;
+            background: linear-gradient(180deg, #6c6c6c 0%, rgba(56, 58, 60, 0) 100%);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            position: relative;
+
+            .bar-body {
+                color: #fff;
+                padding: 5px;
+                width: 200px;
+                // height: 0px;
+                background: linear-gradient(180deg, #6c6c6c 0%, rgba(58, 60, 63, 0)  100%);
+                display: grid;
+                // height: 100%;
+                &.ord,&.view {
+                    // height: 200px;
+                    background: linear-gradient(180deg, #6c6c6c 0%, rgba(58, 60, 63, 0) 100%);
+                }
+                &.view {
+                    // height: 450px;
+                }
+            }
+
+        }
+    }
+
+}
